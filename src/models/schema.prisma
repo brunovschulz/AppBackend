@@ -12,3 +12,29 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id          Int      @id       @default(autoincrement())
+  name        String             @db.VarChar(64)
+  cpf         String   @unique   @db.Char(11)
+  email       String   @unique   @db.VarChar(64)
+  telephone   String             @db.Char(13)
+  password    String   @unique   @db.VarChar(64)
+  rating      Decimal            @db.Decimal(3,2) @default(0) // 3 digits total, where 2 are decimals
+  imageURL    String?  //could use Bytes to store image inside database       
+
+  products    Product[]        
+}
+
+model Product {
+  id            Int       @id       @default(autoincrement())
+  name          String    @db.VarChar(64)
+  imageURL      String?
+  description   String?   @db.VarChar(256)
+  price         Decimal   @db.Money
+  amount        Int    
+
+  userId        Int
+
+  user User @relation(fields: [userId], references: [id])
+}

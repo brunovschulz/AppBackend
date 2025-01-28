@@ -7,14 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
-  "schema": "src/models/schema.prisma"
+    "schema": "src/models/schema.prisma"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@prisma/client": "^6.2.1",
+    "@prisma/client": "^6.3.0",
     "@types/express": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
