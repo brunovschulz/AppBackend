@@ -30,7 +30,7 @@ model Product {
   id            Int       @id       @default(autoincrement())
   name          String    @db.VarChar(64)
   imageURL      String?
-  description   String?   @db.VarChar(256)
+  description   String?   @db.Text
   price         Decimal   @db.Money
   amount        Int    
 
