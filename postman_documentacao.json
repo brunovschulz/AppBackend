@@ -1,0 +1,1033 @@
+{
+	"info": {
+		"_postman_id": "d68ca65d-e9e4-4acf-b7a7-582dbbc11deb",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41590074"
+	},
+	"item": [
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "inserindo usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Paulo",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "111328123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "bur@adsacab",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "21387213122",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "8172132756",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4.9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inserindo usuário",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Rodrigo",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "111328121",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bur@adsacaa",
+											"type": "text"
+										},
+										{
+											"key": "telephone",
+											"value": "21387213122",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "817213213",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "4.9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b2-mMqEpYK4lWbxa4S4fJolXeiamTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 01:03:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Rodrigo\",\n        \"cpf\": \"111328121  \",\n        \"email\": \"bur@adsacaa\",\n        \"telephone\": \"21387213122  \",\n        \"password\": \"817213213\",\n        \"rating\": \"4.9\",\n        \"imageURL\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "pegando todos os usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pegando todos os usuários",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "333"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14d-Ptu10YRLKu+nHnACE4X8aLWuRk8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 01:02:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Marcos\",\n            \"cpf\": \"89132812   \",\n            \"email\": \"bur@adsaaa\",\n            \"telephone\": \"21387219123  \",\n            \"password\": \"8172398131\",\n            \"rating\": \"4.9\",\n            \"imageURL\": null\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Brunão\",\n            \"cpf\": \"891328     \",\n            \"email\": \"bur@adsa\",\n            \"telephone\": \"21387219     \",\n            \"password\": \"81723981\",\n            \"rating\": \"4.9\",\n            \"imageURL\": \"jadjshdoja\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "pegando um usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pegando um usuário",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-hRa6j77xQieN/oThJ9m3KOz5jNw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 00:58:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Brunão\",\n        \"cpf\": \"891328     \",\n        \"email\": \"bur@adsa\",\n        \"telephone\": \"21387219     \",\n        \"password\": \"81723981\",\n        \"rating\": \"4.9\",\n        \"imageURL\": \"jadjshdoja\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deletando um usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/user/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletando um usuário",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/user/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b2-mMqEpYK4lWbxa4S4fJolXeiamTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 01:03:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Rodrigo\",\n        \"cpf\": \"111328121  \",\n        \"email\": \"bur@adsacaa\",\n        \"telephone\": \"21387213122  \",\n        \"password\": \"817213213\",\n        \"rating\": \"4.9\",\n        \"imageURL\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "atualizando um usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Brunogsx",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4.8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "atualizando um usuário",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Brunogsx",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "4.8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-X3H/TXU5EEO7l896oofdUubdbLI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 01:09:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Brunogsx\",\n        \"cpf\": \"891328     \",\n        \"email\": \"bur@adsa\",\n        \"telephone\": \"21387219     \",\n        \"password\": \"81723981\",\n        \"rating\": \"4.8\",\n        \"imageURL\": \"jadjshdoja\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "alterando produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "livro",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "alterando produto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "livro",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-H6mkF3n5xaPc3yOWRnOY3I2hn5Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:14:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"livro\",\n        \"imageURL\": \"sadjakdal\",\n        \"description\": \"djaidoaik\",\n        \"price\": \"20\",\n        \"amount\": 1,\n        \"userId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "pegando um produto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pegando um produto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-H6mkF3n5xaPc3yOWRnOY3I2hn5Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:20:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"livro\",\n        \"imageURL\": \"sadjakdal\",\n        \"description\": \"djaidoaik\",\n        \"price\": \"20\",\n        \"amount\": 1,\n        \"userId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "pegando todos os produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pegando todos os produtos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "581"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"245-qlg8T8/DoYqhPiz9I89NYCLr3do\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:21:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Computador\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Tablet\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Tablet\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Prato\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 1,\n            \"name\": \"livro\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"20\",\n            \"amount\": 1,\n            \"userId\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "produtos de um usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/user/1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "produtos de um usuário",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/user/1/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"1",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "581"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"245-qlg8T8/DoYqhPiz9I89NYCLr3do\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:37:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Computador\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Tablet\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Tablet\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Prato\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"800\",\n            \"amount\": 1,\n            \"userId\": 1\n        },\n        {\n            \"id\": 1,\n            \"name\": \"livro\",\n            \"imageURL\": \"sadjakdal\",\n            \"description\": \"djaidoaik\",\n            \"price\": \"20\",\n            \"amount\": 1,\n            \"userId\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "inserindo produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Fornalha",
+									"type": "text"
+								},
+								{
+									"key": "imageURL",
+									"value": "sadjakdal",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "djaidoaik",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "800.00",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/2/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"2",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inserindo produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Fornalha",
+											"type": "text"
+										},
+										{
+											"key": "imageURL",
+											"value": "sadjakdal",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "djaidoaik",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "800.00",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user/2/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"2",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-0m8Cc8898uXeOWiaTEzmxdoyddU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:47:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"Fornalha\",\n        \"imageURL\": \"sadjakdal\",\n        \"description\": \"djaidoaik\",\n        \"price\": \"800\",\n        \"amount\": 1,\n        \"userId\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deletando produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/product/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"product",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletando produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/product/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"product",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-vq4bC1NFgq2lP3iefDURtRrJU2I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jan 2025 20:50:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Tablet\",\n        \"imageURL\": \"sadjakdal\",\n        \"description\": \"djaidoaik\",\n        \"price\": \"800\",\n        \"amount\": 1,\n        \"userId\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

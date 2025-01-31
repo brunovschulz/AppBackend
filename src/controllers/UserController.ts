@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 class UserController {
 
-    //criar um usuário
+    //criando usuário
     public async create( request:Request, response:Response ){
 
         const {name, cpf, email, telephone, password, rating, imageURL} = request.body;
@@ -35,7 +35,7 @@ class UserController {
         }
     }
 
-    //encontrar um usuário específico
+    //lendo usuário específico
     public async read(request:Request, response:Response){
 
         const {id} = request.params;
@@ -46,6 +46,11 @@ class UserController {
                 where: {id: Number(id)}
                 }
             )
+
+            if(!user){
+                response.status(500).json({message:"No User Found!"})
+                return;
+            }
             
             response.status(200).json({message:"Sucess!", data: user})
 
@@ -57,7 +62,7 @@ class UserController {
 
     }
 
-    //encontrar todos os usuários
+    //lendo todos os usuários
     public async readAll(request:Request, response:Response){
 
         try {
@@ -73,6 +78,7 @@ class UserController {
 
     }
 
+    //atualizando um usuário
     public async update(request:Request, response:Response){
 
         const {id} = request.params;
@@ -105,6 +111,8 @@ class UserController {
     
     }
 
+    //deletando um usuário
+    //onDelete Cascade garante que todos os produtos atrelados ao usuário também sumirão
     public async delete(request:Request, response:Response){
 
         const {id} = request.params;
@@ -125,6 +133,9 @@ class UserController {
 
     }
 
+    //deletando todos os usuários
+    //não disponível em nenhuma rota!!
+    //onDelete Cascade garante que todos os produtos atrelados ao usuário também sumirão
     public async deleteAll(request:Request, response:Response){
 
         try {
