@@ -9,11 +9,11 @@ datasource db {
 
 model User {
   id          Int      @id       @default(autoincrement())
-  name        String             @db.VarChar(64)
+  name        String             @db.VarChar(63)
   cpf         String   @unique   @db.Char(11)
-  email       String   @unique   @db.VarChar(64)
+  email       String   @unique   @db.VarChar(63)
   telephone   String             @db.Char(13)
-  password    String   @unique   @db.VarChar(64)
+  password    String   @unique   @db.VarChar(63)
   rating      Decimal            @db.Decimal(3,2) @default(0) // 3 digitos, dos quais 2 decimais
   imageURL    String?  //poderia ter usado Bytes para armazenar imagem no banco      
 
@@ -22,7 +22,7 @@ model User {
 
 model Product {
   id            Int       @id       @default(autoincrement())
-  name          String    @db.VarChar(64)
+  name          String    @db.VarChar(63)
   imageURL      String?
   description   String?   @db.Text
   price         Decimal   @db.Money

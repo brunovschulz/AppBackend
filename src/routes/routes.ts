@@ -5,6 +5,14 @@ import { Router } from "express";
 import UserController from "../controllers/UserController";
 import ProductController from "../controllers/ProductController";
 
+
+//importando validação
+
+import { UserValidator, } from "../config/validators/UserValidator";
+import { ProductValidator } from "../config/validators/ProductValidator";
+import { ResultValidator } from "../middlewares/ResultValidator";
+import { Result } from "express-validator";
+
 //
 
 const router = Router(); //Router é uma factory, por isso não usamos new antes de Router()
@@ -20,25 +28,25 @@ Isso ocorre porque nosso modelo exige que um produto sempre tenha um usuário re
 */
 
 //USER
-router.post("/user", UserController.create);
+router.post("/user", UserValidator.validateUser("create"), ResultValidator.validateResult , UserController.create);
 
 router.get("/user/:id", UserController.read);
 router.get("/users", UserController.readAll);
 
-router.put("/user/:id", UserController.update);
+router.put("/user/:id", UserValidator.validateUser("update"), ResultValidator.validateResult, UserController.update); // UserValidator.validateUser("update"), ResultValidator.validateResult,
 
 router.delete("/user/:id", UserController.delete);
 //router.delete("/user", UserController.deleteAll); //usado durante desenvolvimento, a função existe
 
 
 //PRODUCT
-router.post("/user/:userId/product", ProductController.create);
+router.post("/user/:userId/product", ProductValidator.validateProduct("create"), ResultValidator.validateResult, ProductController.create);
 
 router.get("/product/:id", ProductController.read);
 router.get("/user/:id/products", ProductController.readAllFromUser);
 router.get("/products", ProductController.readAll);
 
-router.put("/product/:id", ProductController.update);
+router.put("/product/:id", ProductValidator.validateProduct("update"), ResultValidator.validateResult, ProductController.update);
 
 router.delete("/product/:id", ProductController.delete);
 

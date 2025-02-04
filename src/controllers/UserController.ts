@@ -10,7 +10,7 @@ class UserController {
     //criando usuário
     public async create( request:Request, response:Response ){
 
-        const {name, cpf, email, telephone, password, rating, imageURL} = request.body;
+        const {name, cpf, email, telephone, password, imageURL} = request.body;
 
         try {
 
@@ -21,7 +21,7 @@ class UserController {
                   email,
                   telephone,
                   password,
-                  rating,
+                  rating: 0, //começa sem avaliação
                   imageURL,
                 },  
               })
@@ -105,7 +105,7 @@ class UserController {
 
         } catch (error: any) {
 
-            response.status(500).json(error.message)
+            response.status(500).json({message: error.message})
             
         }
     
