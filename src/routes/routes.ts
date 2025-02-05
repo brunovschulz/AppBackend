@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 
 //importando controllers
 
@@ -11,7 +11,8 @@ import ProductController from "../controllers/ProductController";
 import { UserValidator, } from "../config/validators/UserValidator";
 import { ProductValidator } from "../config/validators/ProductValidator";
 import { ResultValidator } from "../middlewares/ResultValidator";
-import { Result } from "express-validator";
+import { photoUpload } from "../config/uploader";
+import { UploaderMessage } from "../middlewares/UploaderMessage";
 
 //
 
@@ -30,10 +31,13 @@ Isso ocorre porque nosso modelo exige que um produto sempre tenha um usuário re
 //USER
 router.post("/user", UserValidator.validateUser("create"), ResultValidator.validateResult , UserController.create);
 
+//baixar imagem de usuário
+router.post("/user/image", photoUpload.single("image"), UploaderMessage.message)
+
 router.get("/user/:id", UserController.read);
 router.get("/users", UserController.readAll);
 
-router.put("/user/:id", UserValidator.validateUser("update"), ResultValidator.validateResult, UserController.update); // UserValidator.validateUser("update"), ResultValidator.validateResult,
+router.put("/user/:id", UserValidator.validateUser("update"), ResultValidator.validateResult, UserController.update);
 
 router.delete("/user/:id", UserController.delete);
 //router.delete("/user", UserController.deleteAll); //usado durante desenvolvimento, a função existe
@@ -41,6 +45,9 @@ router.delete("/user/:id", UserController.delete);
 
 //PRODUCT
 router.post("/user/:userId/product", ProductValidator.validateProduct("create"), ResultValidator.validateResult, ProductController.create);
+
+//baixar imagem de produto
+router.post("/product/image", photoUpload.single("image"), UploaderMessage.message)
 
 router.get("/product/:id", ProductController.read);
 router.get("/user/:id/products", ProductController.readAllFromUser);

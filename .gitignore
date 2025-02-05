@@ -7,4 +7,7 @@ node_modules/
     .idea
     id_rsa_priv.pem
 .env
-    
+uploads/photos/*
+!uploads/photos/p1_teste.png
+!uploads/photos/u1_teste.png
+src/config/mailer.ts
