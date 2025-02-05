@@ -11,9 +11,15 @@ import ProductController from "../controllers/ProductController";
 import { UserValidator, } from "../config/validators/UserValidator";
 import { ProductValidator } from "../config/validators/ProductValidator";
 import { ResultValidator } from "../middlewares/ResultValidator";
+
+//importando upload de imagens
+
 import { photoUpload } from "../config/uploader";
 import { UploaderMessage } from "../middlewares/UploaderMessage";
 
+//importando classe que envia emails
+
+import { EmailSender } from "../middlewares/EmailSender";
 //
 
 const router = Router(); //Router é uma factory, por isso não usamos new antes de Router()
@@ -29,6 +35,8 @@ Isso ocorre porque nosso modelo exige que um produto sempre tenha um usuário re
 */
 
 //USER
+router.post("/user/:id/send-email", EmailSender.sendEmail)
+
 router.post("/user", UserValidator.validateUser("create"), ResultValidator.validateResult , UserController.create);
 
 //baixar imagem de usuário

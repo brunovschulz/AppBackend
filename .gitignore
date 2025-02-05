@@ -10,4 +10,3 @@ node_modules/
 uploads/photos/*
 !uploads/photos/p1_teste.png
 !uploads/photos/u1_teste.png
-src/config/mailer.ts
