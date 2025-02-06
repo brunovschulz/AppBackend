@@ -13,7 +13,9 @@ model User {
   cpf         String   @unique   @db.Char(11)
   email       String   @unique   @db.VarChar(63)
   telephone   String             @db.Char(13)
-  password    String   @unique   @db.VarChar(63)
+  //password    String   @unique   @db.VarChar(63)
+  hash        String
+  salt        String
   rating      Decimal            @db.Decimal(3,2) @default(0) // 3 digitos, dos quais 2 decimais
   imageURL    String?  //poderia ter usado Bytes para armazenar imagem no banco      
 

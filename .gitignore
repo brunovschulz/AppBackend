@@ -1,12 +1,6 @@
 node_modules/
-    .DS_Store
-    *.sqlite
-    *.png
-    *.jpg
-    .env
-    .idea
-    id_rsa_priv.pem
 .env
 uploads/photos/*
 !uploads/photos/p1_teste.png
 !uploads/photos/u1_teste.png
+id_rsa_priv.pem

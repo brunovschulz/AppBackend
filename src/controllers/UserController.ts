@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from "@prisma/client";
+import auth from "../config/auth"
 
 const prisma = new PrismaClient();
 
@@ -11,6 +12,7 @@ class UserController {
     public async create( request:Request, response:Response ){
 
         const {name, cpf, email, telephone, password, imageURL} = request.body;
+        const {hash, salt} = auth.generatePassword(password);
 
         try {
 
@@ -20,7 +22,8 @@ class UserController {
                   cpf,
                   email,
                   telephone,
-                  password,
+                  hash,
+                  salt,
                   rating: 0, //começa sem avaliação
                   imageURL,
                 },  
@@ -82,7 +85,7 @@ class UserController {
     public async update(request:Request, response:Response){
 
         const {id} = request.params;
-        const {name, cpf, email, telephone, password, rating, imageURL} = request.body;
+        const {name, cpf, email, telephone, rating, imageURL} = request.body;
 
         try {
             
@@ -95,7 +98,6 @@ class UserController {
                     cpf,
                     email,
                     telephone,
-                    password, 
                     rating, 
                     imageURL
                 },
@@ -150,6 +152,38 @@ class UserController {
             
         }
 
+    }
+
+    public async login(request: Request, response: Response){
+
+        try {
+
+            const {id, password} = request.body;
+
+            const user = await prisma.user.findUnique({
+                where:{id:Number(id)}
+            })
+
+            if(!user){
+                response.status(404).json({message: "No user found!"})
+                return;
+            }
+
+            if(!auth.checkPassword(password, user.hash, user.salt)){
+                response.status(500).json({message: "Wrong password!"})
+                return;
+            }
+
+            const token = auth.generateJWT(user);
+
+            response.status(500).json({message: "Successful Authentication, Token sent!"})
+            
+        } catch (error: any) {
+            
+            response.status(500).json({error: error.message})
+
+        }
+        
     }
 
 }
