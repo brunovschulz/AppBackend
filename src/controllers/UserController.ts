@@ -176,7 +176,7 @@ class UserController {
 
             const token = auth.generateJWT(user);
 
-            response.status(500).json({message: "Successful Authentication, Token sent!"})
+            response.status(201).json({message: "Successful Authentication, Token sent!", token: token})
             
         } catch (error: any) {
             
@@ -184,6 +184,37 @@ class UserController {
 
         }
         
+    }
+
+    public async changePassword(request: Request, response: Response){
+
+        const id = request.user;
+
+        if(!id){
+            response.status(500).json({message:"Acesso não Autorizado!"})
+        }
+
+        const {newPassword} = request.body;
+        const {hash, salt} = auth.generatePassword(newPassword)
+
+        try {
+            
+            const user = await prisma.user.update({
+                where:{id: Number(id)},
+                data: {
+                    hash,
+                    salt
+                }
+            })
+
+            response.status(200).json({message:"Acesso Autorizado! Senha trocada com sucesso.", user:user})
+
+        } catch (error) {
+            
+            response.status(500).json({message:"Server Error!"})
+            
+        }
+
     }
 
 }

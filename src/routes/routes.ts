@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import passport from "passport";
 
 //importando controllers
 
@@ -45,7 +46,14 @@ router.post("/user/image", photoUpload.single("image"), UploaderMessage.message)
 router.get("/user/:id", UserController.read);
 router.get("/users", UserController.readAll);
 
+//Rota para login
+router.get("/login", UserController.login);
+
+//Trocar senha, precisa de token! Testando autenticação
+router.put("/user", passport.authenticate("jwt", {session: false}), UserController.changePassword);
+
 router.put("/user/:id", UserValidator.validateUser("update"), ResultValidator.validateResult, UserController.update);
+
 
 router.delete("/user/:id", UserController.delete);
 //router.delete("/user", UserController.deleteAll); //usado durante desenvolvimento, a função existe

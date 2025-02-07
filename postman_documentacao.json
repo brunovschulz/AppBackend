@@ -1028,6 +1028,1099 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Validação",
+			"item": [
+				{
+					"name": "inserindo produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "imageURL",
+									"value": "    ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": " Blablabla",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "23.23323",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "101",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"1",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inserindo produto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "a",
+											"type": "text"
+										},
+										{
+											"key": "imageURL",
+											"value": "    ",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": " Blablabla",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "23.23323",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "101",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user/1/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"1",
+										"product"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e3-K2J1emEPNExMdgeirBwMvfSUun0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Feb 2025 23:28:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"erros\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"a\",\n            \"msg\": \"At least 3 and max 63 characters\",\n            \"path\": \"name\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"imageURL\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"Must be an URL\",\n            \"path\": \"imageURL\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"23.23323\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"price\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"101\",\n            \"msg\": \"Must be Positive value until 100\",\n            \"path\": \"amount\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "inserindo usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pa",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "111322123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "buradsacab",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "21387213122324",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inserindo usuário",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Pa",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "111322123",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "buradsacab",
+											"type": "text"
+										},
+										{
+											"key": "telephone",
+											"value": "21387213122324",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "589"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24d-O8X7UGD06wTYpAjsJd3V8vfzI70\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Feb 2025 23:26:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"erros\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"Pa\",\n            \"msg\": \"At least 3 and max 63 characters\",\n            \"path\": \"name\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"buradsacab\",\n            \"msg\": \"It must be an email!\",\n            \"path\": \"email\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"111322123\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"cpf\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"21387213122324\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"telephone\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"You must have a password!\",\n            \"path\": \"password\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"password\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Atualização Produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jornal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validação Produto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "amount",
+											"value": "200",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-Dw4/72xYMwYFIXx90iwDsCyLjFg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Feb 2025 22:44:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"erros\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"200\",\n            \"msg\": \"Must be Positive value until 100\",\n            \"path\": \"amount\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Atualização Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Validação Usuário",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3333/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-lpulA6RSGvXPGk8s697vMBDzn34\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Feb 2025 23:20:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"erros\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"Your user has to have name!\",\n            \"path\": \"name\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"value\": \"\",\n            \"msg\": \"At least 3 and max 63 characters\",\n            \"path\": \"name\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "upload imagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/bruno/Downloads/teste.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/user/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user",
+						"image"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upload imagem",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bruno/Downloads/teste.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/profile/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"profile",
+								"image"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "364"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16c-XQmzYOVU5LQvcjf6gmSX8gHDl4k\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 14:34:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"File uploaded successfully\",\n    \"file\": {\n        \"fieldname\": \"image\",\n        \"originalname\": \"teste.png\",\n        \"encoding\": \"7bit\",\n        \"mimetype\": \"image/png\",\n        \"destination\": \"C:\\\\Users\\\\bruno\\\\bruno_vscode\\\\ejcm\\\\trabalho_2\\\\backend\\\\uploads\\\\photos\",\n        \"filename\": \"2_teste.png\",\n        \"path\": \"C:\\\\Users\\\\bruno\\\\bruno_vscode\\\\ejcm\\\\trabalho_2\\\\backend\\\\uploads\\\\photos\\\\2_teste.png\",\n        \"size\": 272159\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "enviando email para usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3333/user/9/send-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user",
+						"9",
+						"send-email"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "enviando email para usuário",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3333/user/9/send-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user",
+								"9",
+								"send-email"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-42ZCWAUz3yJ1TmkXjqulr0GkcwA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 21:23:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Email sent!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login do usuário",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login do usuário",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "842"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34a-UVkrtgI/wgvFiTIhmEZeYQsOl1k\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Feb 2025 00:14:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successful Authentication, Token sent!\",\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTczODg4NzI5NiwiZXhwIjoxNzM4ODg3ODk2fQ.MscJilzhMYADmXoA7k2BFUuKhqUArTz5amqB2CmYLx3Z2oSSQBGAMQpBbePShxcLAYqeBgCUXonsAcuA6-bkFkgOEpnPY-1KErd6p1faEjKN05GakdRag5UU3lFnHcVyeVIyTKNSS_slkWiweuAohF484-EkAI95fGWczKBLOIQEKl79sJn98XI3pzDsoY8zMrregZx6Ca4PHQ7M9RO_iMihLPTGVmCSgYTkFGQJ759n9GHEGpjIN5nkOPtHKPyE7-HJNuvxYLRVaRM4R_rrRQvUGDlMnTMNqRujbkjcekkl8VmZ-2KnS6jwxm40rrucMyTMAs0QJ_9XM29oL2x6Nw5IsxYVQ1zTRPa9b92BFeNsVoTqFyxQyP8n6qA3tzzWjbGrtYXr0F6ggwOwJORmG12HugKK74GTUjrdvrstY1NSVaLXcjrB_I4oKEPaoCRVv5vbU_elrxhe1oK4fevJn4O__vNJznvRA0R4fwE0Nht7Ei2tP0F6YfQV-42pR6Kuq7nyAkMoAw7HY_QtGIbRi0alHscUrCk_StaBrdn7v2U0HDwidtqXvH2e_FOY4OuRvg1qDoqpy47X0c6K3PBcLc4heOnSjWWckkF6RR6r2-yT3P7XUSJKGTpKUqnJBerrhniGXUGu3tJ98G2La_uo-3VA_lSmWlvqLZ1llRmcSLc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "criando usuario apos hash salt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Bruno",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "brunovs@dcc.ufrj.br",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": "17717717717",
+							"type": "text"
+						},
+						{
+							"key": "telephone",
+							"value": "21989899898",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "criando usuario apos hash salt",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bruno",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "brunovs@dcc.ufrj.br",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "17717717717",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "21989899898",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "371"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"173-j1/i+JkINswrntMZFYiPr+vIKpY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Feb 2025 00:09:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Sucess!\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Bruno\",\n        \"cpf\": \"17717717717\",\n        \"email\": \"brunovs@dcc.ufrj.br\",\n        \"telephone\": \"21989899898  \",\n        \"hash\": \"e47e28b039bf17fb4ad3cc1174de59c4f71adfe886923738a271fbcddd999a261cb462c8534aba2038ce22f9fc698b7e38f4264bd17aa515d48e4c498eed0306\",\n        \"salt\": \"1dcf66ec1d5801f079d9e9e3f0432dad95f055fb60e68410de097b0dfb67e01a\",\n        \"rating\": \"0\",\n        \"imageURL\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "trocando senha (somente com token))",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTczODg4NzQzMCwiZXhwIjoxNzM4ODg4MDMwfQ.ccf04gRA-HZtAnpcqyXCAY8e6mTQiL8FuwedCThSRGRMmUqGi1V1t8xfiaB5Tm2t-21UqF20j4Yv0DNoGhzhdLDGy1z2unbbgO_37hqF1RstvTPNb70e1MIPiV9uXN7-VEqCr-9YSzfD3e9DdMO8ozv0QvhljZx1-z8y7f3qDZQMqBjDSzVO5fOmkxC23XOAY2BKRAbyD-10zkbiHPEU6XZSbZcoaZrf8bB-O2W1ghLukEnUru2_eInWdxB_093-Jq3kKkf3lmDETLPThJ0kckjyplh4q0hEmtu0wdmNmdrtx1JmmMnj04j36ztFAulrKEB7zxly-gAkUjBylT9qnArz00XDO_FSDP-rYt_SfOkVu7L70iPnawo7WKPpAmtQderAQxNtkF3bIS5h7pcPPwVcQf2ogtEFsre0u_cbdbePCKXIpS1ULiigsnaRuKVXdn2fWj9dLlDQIgSuA-etCIzkO_mQvNilCzJAurwMXxYiwqMjQMO8C1BYPw0jopT_2wJjfiuAXI6FZMp9VcRCt0j0MfUCLwOhm---lxh9FOiDiQc6UG0ogXqYL-grnW328KYM1VnqD2MFGLYOwCeVS3xw2Mvu9lGz8AokzXN1doodqT0zPgVvROu0o5b6TzIZFpps0DkJ9HHW20P5ToVE285_EaRVleR0JpQ2c5Nba60",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "newPassword",
+							"value": "123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "trocando senha (somente com token))",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "409"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"199-Ov/9dgULi9VmfK5qY71H5XfSBGI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Feb 2025 00:17:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Acesso Autorizado! Senha trocada com sucesso.\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Bruno\",\n        \"cpf\": \"17717717717\",\n        \"email\": \"brunovs@dcc.ufrj.br\",\n        \"telephone\": \"21989899898  \",\n        \"hash\": \"710a466b39c5233ca9a14a8443874ca5775de5bd8149fd35cec00835bd24f640e9e9bb8a89f9fd67de8e985ceb9d930f79faf0d95645ca7c913f139f56c40828\",\n        \"salt\": \"36b8f12f7e74d2ffcce05abb1c99de694e025d96b51fce368fb5255f260f8cfe\",\n        \"rating\": \"0\",\n        \"imageURL\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "errando o token ao trocar senha",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "aR",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "newPassword",
+							"value": "1231321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "errando o token ao trocar senha",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "1231321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Feb 2025 00:19:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized"
+				}
+			]
 		}
 	]
 }
